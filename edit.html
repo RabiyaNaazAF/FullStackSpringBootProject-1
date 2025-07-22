@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit page</title>
+    <style>
+        body {
+            background-image: url('https://img.pikbest.com/wp/202347/contemporary-design-3d-podium-with-clean-white-in-professional-studio-setting_9740533.jpg!f305cw');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        div {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #458ad4;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Make Changes Here</h1>
+        <form action="/edit" method="post">
+
+            <input type="hidden" name="id" th:value="${product.id}"><br>
+            Image Link:<input type="text" name="imageLink" th:value="${product.imageLink}" ><br>
+            Project Name:<input type="text" name="name" th:value="${product.name}" ><br>
+            Description:<input type="text" name="description" th:value="${product.description}" ><br>
+            Skills Required:<input type="text" name="skills" th:value="${product.skills}" ><br>
+            Project Link:<input type="text" name="link" th:value="${product.link}" ><br>
+            
+            
+            <button type="submit">Update</button>
+        </form>
+        <button>Back</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=60&w=3000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        div {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        div a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #458ad4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+     <div>
+         <h1>WelCome To My Web Page</h1>
+         <h3>Hii, Iam Rabiya Naaz AF</h3>
+            <p>A JAVA Full Stack WEB Developer</p>
+    <p>I develop scalable web applications and software solutions with a strong focus on performance and technical innovation.</p>
+    <a href="https://drive.google.com/file/d/1yf1Nw5DADs2nh44W3KSZSXGaLPt3QksQ/view?usp=drivesdk">Resume</a>
+    <a href="https://linkedin.com/in/rabiya-naaz-a-f">LinkedIn</a>
+    <a href="https://afrabiyanaaz.vercel.app "> Website</a>
+    <a href="https://github.com/RabiyaNaazAF" >GitHub</a>
+    <a href="https://afrabiyanaaz@gmail.com">Email</a>
+     </div>
+     <div>
+        <span>View My Project Here</span>
+        <h3 th:text="${pass}" style="color:green"></h3>
+		<a href="/add"><button>Add Record</button></a>
+		<a href="/view"><button>View  Record</button></a>
+     </div>
+</body>
+</html>

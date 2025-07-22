@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View Products</title>
+    
+    <style>
+    body {
+        background-image: url('https://wallpapers.com/images/hd/doodles-on-project-management-xwvsyosv7rb5my5r.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    #container {
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 700px;
+    }
+    #box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        
+        border-radius: 10px;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+    button {
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        background-color: #458ad4;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    h1 {
+        color: #fff;
+        font-size: 2em;
+    }
+    span{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+          text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        
+        border-radius: 10px;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+</style>
+</head>
+<body>
+      <div id="container">
+        <h1> Take A Look, Start Exploring</h1>
+        <div id="box"> 
+             <div>
+          <span th:each="product : ${products}">
+      <div>
+        <a th:href="${product.link}" target="_blank">
+        <img height="300px" width="300px"
+             th:src="${product.imageLink}"
+             th:alt="${product.name}" /> </a>
+    <h2 th:text="${product.name}"></h2>
+      </div>
+    <div>
+    <p th:text="${product.description}"></p>
+    <p th:text="${product.skills}"></p>
+    <a th:href="${product.link}" target="_blank">View Project</a>
+    </div>
+</span>
+        </div>
+
+         
+    </div>
+    <a href="/"><button>Back</button></a>
+</body>
+</html> 
+

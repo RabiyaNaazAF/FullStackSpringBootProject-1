@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>add product</title>
+   <style>
+         body {
+            background-image: url('https://as1.ftcdn.net/v2/jpg/08/68/26/20/1000_F_868262080_3hZGWoDGUwXSD0uNPPanprh8MY473AGe.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        div {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h1>Add New Project Here</h1>
+
+    <form action="/add" method="post">
+       Image Link: <input type="text" name="imageLink" ><br><br>
+        Project Name: <input type="text" name="name" ><br><br>
+        Description: <input type="text" name="description" ><br><br>
+        Skills Required:<input type="text" name="skills" ><br>
+        Project Link:<input type="text" name="link" ><br>
+      
+        <br>
+        <button>Add</button>
+    </form>
+    <br>
+
+        <a href="/"> <button>Back</button> </a>
+</div>
+</body>
+</html>
+          
+          
+           
+      
